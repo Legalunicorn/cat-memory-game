@@ -1,5 +1,56 @@
 @import "./mixins.scss";
+@import "./variables.scss";
 
 .game-menu{
+    @font-face {
+        font-family: 'dogicabold';
+        src: url("../assets/font/dogicabold.ttf");
+    }
+    color: $blue-4;
+    font-family: 'dogicabold';
+    border: 0.3rem solid $blue-4;
+    border-radius: 1rem;
+    background-color: $blue-2;
+    padding: 1.2rem;
+
     @include flex-center(column);
 }
+
+.menu-header{
+    margin-bottom:0.5rem;
+}
+
+.menu-content{
+    width:100%;
+    @include flex-center(column);
+    gap: 0.5rem;
+
+    button{
+        color: $blue-4;
+        width: 80%;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem 1rem;
+        border:0;
+        font-family: 'dogicabold';
+    
+    }
+
+    & button:first-child:hover{
+        background-color: $blue-4;
+        color: lightgreen;
+        transition: 150ms ease-in-out;
+
+        
+    }
+    & button:nth-child(2):hover{
+        color: lightsalmon;
+        background-color: $blue-4;;
+        transition: 150ms ease-in-out
+    }
+    & button:nth-child(3):hover{
+        color: lightpink;
+        background-color: $blue-4;
+        transition: 150ms ease-in-out
+    }
+}
+

@@ -10,13 +10,13 @@ export default function DisplayChoices({
     // setScore,
     highScore,
     setHighScore,
-    setEndScore
+    setEndScore,
+    setResult
 }){
     const [score,setScore] = useState(0)
     const [chosenIds,setChosenIds] = useState([])
     const maxScore = copyData.length;
 
-    console.log('ENDSCORE:::  ')
     let displayCount;
     if (noCats==5) {displayCount=3}
     else if (noCats==10) {displayCount=5}
@@ -76,8 +76,8 @@ export default function DisplayChoices({
             key={cat.id}
             id={cat.id}
             url={cat.url} 
-            highScore={highScore}
-            setHighScore={setHighScore}
+            // highScore={highScore}
+            // setHighScore={setHighScore}
             chosenIds={chosenIds}
             setChosenIds={setChosenIds} 
             score={score}
@@ -85,19 +85,17 @@ export default function DisplayChoices({
             setIsGameOver={setIsGameOver}
             setEndScore={setEndScore}
             maxScore={maxScore}
+            setResult={setResult}
             />
         </>
     )
 
   
     return(
-        <>
-            <div  className="card-container">
+        <div className="game-container">
+            <div className="card-container">
                 {CatsJSX}
             </div>
-            <p>Score: {score}</p>
-        </>
-    )
-
-
-}
+            <p className="score">Score: {score}/{maxScore}</p>
+        </div>
+    )}

@@ -1,16 +1,36 @@
 @import "./mixins.scss";
+@import "./variables.scss";
 
 #root{
-  @include flex-center(column)
+  @include flex-center(column);
+
 }
 
 .header{
-  margin: 2rem;
+  @include flex-center(column);
+  @font-face {
+    font-family: 'FatCat';
+    src: url('../assets/font/FatCat.ttf');
+  };
+  font-family: 'FatCat';
+  -webkit-text-stroke: 0.5rem white;
+  & h1{
+    font-size: 4rem;
+    text-align: center;
+    -webkit-text-stroke: 1rem white;
+  }
+  
+  paint-order:stroke fill;
+
+  color:$blue-4;
+
+  margin-bottom: 2rem;
   padding: 2rem;
 }
 
 .content{
-  @include flex-center(row)
+  @include flex-center(row);
+  width:100%;
 }
 /* #root {
   max-width: 1280px;

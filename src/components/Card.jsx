@@ -1,6 +1,6 @@
 import "../styles/Card.scss"
-import { useState } from "react"
 import popcat from "../assets/images/popcat.png"
+import card_audio from "../assets/sound/card.mp3"
 
 
 export default function Card({
@@ -8,16 +8,17 @@ export default function Card({
     url, //card
     chosenIds, //display
     setChosenIds, //display
-    // highScore, //app
-    // setHighScore, //app
     setScore,
     score,
     setIsGameOver,
     setEndScore,
-    maxScore
+    maxScore,
+    setResult
 
 }){
+    const click_audio = new Audio(card_audio)
     function handleCardClick(e){
+        click_audio.play();
         console.log("user clicked id: ",e.target.dataset.id)
         const id = e.target.dataset.id;
     
@@ -36,6 +37,7 @@ export default function Card({
             if (nextRenderScore==maxScore){ //user has won the game
                 setEndScore(maxScore)
                 setIsGameOver(true)
+                setResult('victory')
             }
 
         }

@@ -10,6 +10,7 @@ import popcat from "../assets/images/popcat.png"
 
 
 
+
 export default function GameWindow({
     difficulty,
     // gameOver,
@@ -17,10 +18,9 @@ export default function GameWindow({
     highScore,
     setHighScore,
     endScore,
-    setEndScore
+    setEndScore,
+    setResult
 }){
-    console.log('HIGHSCORE: ',highScore)
-    console.log('GAME WINDOW IS RE RENDERING!!!')
 
     let noCats;
     if (difficulty=='easy'){
@@ -35,7 +35,6 @@ export default function GameWindow({
 
     const [catsData,setCatsData] = useState([])
     const [gameOver,setGameOver] = useState(false)
-    // const [endScore,setEndScore] = useState(0)
 
 
 
@@ -74,6 +73,7 @@ export default function GameWindow({
                 setHighScore={setHighScore}
                 // score={score}
                 setEndScore={setEndScore}
+                setResult={setResult}
             />
         )        
     }

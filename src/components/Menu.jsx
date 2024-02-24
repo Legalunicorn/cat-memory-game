@@ -1,6 +1,8 @@
 //menu component 
 import "../styles/Menu.scss"
 
+import menu_audio from "../assets/sound/menu_select.mp3"
+
 
 
 //menu button onlick
@@ -12,7 +14,9 @@ export default function Menu({
     setDifficulty
 
 }){
+    const MENU_AUDIO = new Audio(menu_audio)
     function handleChangeDifficulty(e){
+        MENU_AUDIO.play();
         setDifficulty(e.target.dataset.difficulty)
     }
 

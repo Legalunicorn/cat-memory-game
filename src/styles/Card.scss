@@ -1,8 +1,9 @@
 @import "./mixins.scss";
+@import "./variables.scss";
 
 .card{
     width:20%;
-    min-width:80px;
+    min-width:120px;
     aspect-ratio: 1/1.2;
     line-height: 0;
 
@@ -21,7 +22,7 @@
 
           &:hover{
             transform: 300ms ease-in-out;
-            filter: drop-shadow(0 0 0.5rem black);
+            // filter: drop-shadow(0 0 0.5rem black);
 
           }
 
@@ -30,8 +31,22 @@
 
     &:hover{
         // border: 5px solid bisque;
-        transform: scale(1.03);
+        transform: scale(1.03) translateY(-8px);
         transition: 200ms ease-in-out;
+
+        &::after{
+            position:absolute;
+            margin-left:-50%;
+            margin-top:-50%;
+            top:50%;
+            left:50%;
+            content: "?";
+            color:white;
+            -webkit-text-stroke: 0.5rem $blue-4;
+            paint-order:stroke fill;
+            font-size: 3rem;
+            text-align: center;
+        }
     }
 }
 

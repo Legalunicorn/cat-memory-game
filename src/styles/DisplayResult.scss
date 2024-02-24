@@ -1,0 +1,75 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.game-container{
+    color: $blue-4;
+    @include flex-center(column);
+    gap:2rem;
+    
+}
+
+.results{
+    color: $blue-4;
+    @include flex-center(column);
+    flex-wrap:wrap;
+    border: 10px solid $blue-4;
+    background-color:$beige;
+    padding: 2rem;
+    border-radius: 2rem;
+    gap: 10px;
+    max-width: 80%;
+    text-align: center;
+
+
+    
+
+    & p:first-child{
+        font-size: 20px;
+        margin-bottom: 2rem;
+        animation: 1.5s oscillate infinite alternate;
+    }
+    & .meme{
+        // border: 5px solid $blue-3;
+        border-radius: 2rem;
+        // animation: 1.5s oscillate infinite alternate;
+    }
+}
+
+.menu-options{
+    @include flex-center(row);
+    gap: 2rem;
+}
+
+button{
+    color: $blue-4;
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem 1rem;
+    border:0;
+    font-family: 'dogicabold';
+    border: 5px solid $blue-4;
+
+    &:hover{
+        background-color: $blue-4;
+        color:$beige;
+        transition: 250ms ease-in-out
+
+    }
+}
+
+.score{
+    background-color: $beige;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 0.5rem solid $blue-4;
+}
+
+@keyframes oscillate{
+    from{
+        transform: translateY(-5px)
+    }
+    to{
+        transform: translateY(5px);
+    }
+
+}
