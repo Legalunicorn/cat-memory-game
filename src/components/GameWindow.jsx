@@ -7,7 +7,7 @@ import "../styles/GameWindow.scss"
 
 import popcat from "../assets/images/popcat.gif"
 
-
+import bg_aud from "../assets/sound/background_music.mp3"
 
 
 
@@ -36,7 +36,7 @@ export default function GameWindow({
     const [catsData,setCatsData] = useState([])
     const [gameOver,setGameOver] = useState(false)
 
-
+    const bg = new Audio(bg_aud)
 
     useEffect(()=>{ 
         async function startFetch(){
@@ -53,10 +53,14 @@ export default function GameWindow({
         }
 
     },[difficulty])
+
+    function bgMusic(){
+        bg.play()
+    }
     if (catsData.length==0){
         return(
             <>
-                <div className="loading-all">
+                <div onLoad={bgMusic} className="loading-all">
                     <img src={popcat} alt="" />
                     <p>Loading your {noCats} cats....</p>
                 </div>
