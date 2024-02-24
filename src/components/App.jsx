@@ -4,14 +4,13 @@ import "../styles/App.scss"
 import Menu from './Menu'
 import GameWindow from './GameWindow';
 import DisplayResult from './Result';
-import background_music from "../assets/sound/menu_select.mp3"
+import background_music from "../assets/sound/background_music.mp3"
 
 import card_audio from "../assets/sound/card.mp3"
 //test your API?
 
 
 function App(){
-  console.log('APP IS RERENDERING!!!!')
   const [difficulty,setDifficulty] = useState('')
   const [gameOver,setGameOver] = useState(false)
   const [highScore,setHighScore] = useState(0)
@@ -22,18 +21,12 @@ function App(){
 
   //audio
   const card_sound  = new Audio(card_audio);
+  const bg = new Audio(background_music)
 
-
-  console.log('ES HS: ',endScore,highScore)
   if (endScore>highScore){
     setHighScore(endScore)
   }
 
-  function getNoCats(difficulty){
-    if (difficulty=='easy') return 5
-    else if (difficulty=='medium') return 10
-    else return 15
-  }
 
   function handleMenuButton(){
     card_sound.play()
@@ -49,6 +42,7 @@ function App(){
     setEndScore(0)
     setResult('')
   }
+
 
   return (
     <>
@@ -96,7 +90,7 @@ function App(){
       </div>
 
       <div className="footer">
-          
+
       </div>
     </>
   )
