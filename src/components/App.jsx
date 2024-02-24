@@ -78,6 +78,7 @@ function App(){
                   setHighScore={setHighScore}
                   setEndScore={setEndScore}
                   setResult = {setResult}
+        
                 />
               )}
 

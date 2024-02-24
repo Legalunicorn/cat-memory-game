@@ -7,13 +7,12 @@ import "../styles/GameWindow.scss"
 
 import popcat from "../assets/images/popcat.gif"
 
-import bg_aud from "../assets/sound/background_music.mp3"
+// import bg_aud from "../assets/sound/background_music.mp3"
 
 
 
 export default function GameWindow({
     difficulty,
-    // gameOver,
     setIsGameOver,
     highScore,
     setHighScore,
@@ -34,9 +33,10 @@ export default function GameWindow({
     }
 
     const [catsData,setCatsData] = useState([])
-    const [gameOver,setGameOver] = useState(false)
+    // const [gameOver,setGameOver] = useState(false)
 
-    const bg = new Audio(bg_aud)
+
+    // const bg = new Audio(bg_aud)
 
     useEffect(()=>{ 
         async function startFetch(){
@@ -55,7 +55,14 @@ export default function GameWindow({
     },[difficulty])
 
     function bgMusic(){
-        bg.play()
+        let bg_audio = document.getElementById('audio');
+        if (!bg_audio.ended){
+            console.log('not over')
+            bg_audio.play();
+        }
+        else{console.log('over')}
+
+        // bg.play()
     }
     if (catsData.length==0){
         return(
