@@ -29,8 +29,8 @@
   paint-order:stroke fill;
   color:$blue-4;
   padding: 1.8rem;
-  border-radius: 2rem;
-  background-color: $beige;
+  border-radius: 1.5rem 2.5rem;
+  background-color: #f3ebdf;
 
   &:hover{
     background-color: $blue-4;
@@ -58,7 +58,7 @@
 
 
 @media(max-width:600px){
-  .header h1{
+  .header,.header h1{
     -webkit-text-stroke: 0 white;
     paint-order: normal;
   }

@@ -63,6 +63,7 @@ function App(){
               {gameOver?(
                 <DisplayResult
                 result={result}
+                endScore={endScore}
                 handleMenuButton={handleMenuButton}
                 handleRestartGame={handleRestartGame}
                 />

@@ -8,7 +8,8 @@ import "../styles/DisplayResult.scss"
 export default function DisplayResult({
     result,
     handleMenuButton,
-    handleRestartGame
+    handleRestartGame,
+    endScore
 }){
 
   function queSound(){
@@ -27,14 +28,17 @@ export default function DisplayResult({
         {result=='victory'?(
           <>
             <p>You Won!</p>
+            <p>Score: {endScore}</p>
             <img onLoad={queSound} className="meme"src={victory} alt="victory_gif"></img>
           </>
         ):(
           <>
             <p>Game over!Better luck next time. </p>
+            <p>Score: {endScore}</p>
             <img onLoad={queSound} className="meme" src={lose} alt="lose_gif"></img>
           </>
         )}
+      
         <div className="menu-options">
         <button onClick={handleMenuButton}>Menu</button>                
         <button onClick={handleRestartGame}>Try Again</button>

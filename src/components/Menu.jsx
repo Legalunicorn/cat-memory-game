@@ -31,8 +31,12 @@ export default function Menu({
                     <button onClick={handleChangeDifficulty} data-difficulty="medium" className="difficulty-option">Medium</button>
                     <button onClick={handleChangeDifficulty} data-difficulty="hard" className="difficulty-option">Hard</button>
                 </div>
+                <div>
+                Dont pick the same cat twice!
+                </div>
 
             </div>
+ 
         </>
     )
 }
