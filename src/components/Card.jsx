@@ -56,7 +56,7 @@ export default function Card({
         <>
             <div data-id={id} onClick={handleCardClick} key={id} className="card">
                 {/* dont actually need the div below */}
-                <div className="card-front"> 
+                <div key={Date.now()}className="card-front"> 
                     <img data-id={id} onLoad={handleLoad} className="cat-img hide" src={url} alt="cat-img" />
                     <div className="card-loading">
                         <img src={popcat} alt="" />
