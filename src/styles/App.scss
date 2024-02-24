@@ -22,7 +22,7 @@
     font-style: italic;
     font-size: 3.5rem;
     text-align: center;
-    -webkit-text-stroke: 1rem white;
+    // -webkit-text-stroke: 1rem white;
   }
 
   paint-order:stroke fill;
@@ -42,10 +42,14 @@
 .content{
 
   @include flex-center(row);
-  // border: 1rem solid white;
-  // background-color: #EEE3CB;
   padding: 1rem 0.5rem;
-  // border-radius: 1.5rem;
   width:100%;
-  // filter: drop-shadow(0 0 2rem #e9c7a9)
+}
+
+
+@media(max-width:600px){
+  .header h1{
+    -webkit-text-stroke: 0 white;
+    paint-order: normal;
+  }
 }
