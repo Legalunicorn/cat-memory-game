@@ -56,10 +56,12 @@ export default function GameWindow({
 
     function bgMusic(){
         let bg_audio = document.getElementById('audio');
-        if (!bg_audio.ended){
+        if (bg_audio.paused){
+            //not ended = true => ENDED
             console.log('not over')
             bg_audio.play();
         }
+        //
         else{console.log('over')}
 
         // bg.play()
