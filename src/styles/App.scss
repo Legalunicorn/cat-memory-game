@@ -1,9 +1,25 @@
+@import "./mixins.scss";
+
+#root{
+  @include flex-center(column)
+}
+
+.header{
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.content{
+  @include flex-center(row)
+}
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+
 
 .logo {
   height: 6em;
