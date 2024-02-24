@@ -1,71 +1,67 @@
 @import "./mixins.scss";
 @import "./variables.scss";
 
-.game-menu{
-    @font-face {
-        font-family: 'dogicabold';
-        src: url("../assets/font/dogicabold.ttf");
-    }
+.game-menu {
+  @font-face {
+    font-family: "dogicabold";
+    src: url("../assets/font/dogicabold.ttf");
+  }
+  color: $blue-4;
+  font-family: "dogicabold";
+  box-shadow: 0.5rem 0.5rem $blue-4;
+  border: 0.3rem solid $blue-1;
+  border-radius: 1rem;
+  background-color: $blue-2;
+  padding: 1.9rem 2.5rem;
+  max-width: 90%;
+  text-align: center;
+
+  @include flex-center(column);
+}
+
+.menu-header {
+  margin-bottom: 1.8rem;
+  background-color: $blue-1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 1rem;
+  box-shadow: 0.5rem 0.5rem $blue-4;
+}
+
+.menu-content {
+  width: 100%;
+  margin-bottom: 2rem;
+  @include flex-center(column);
+  gap: 1rem;
+
+  button {
     color: $blue-4;
-    font-family: 'dogicabold';
-    box-shadow: 0.5rem 0.5rem $blue-4;
-    border: 0.3rem solid $blue-1;
-    border-radius: 1rem;
-    background-color: $blue-2;
-    padding: 1.9rem 2.5rem;
-    max-width: 90%;
-    text-align: center;
-
-    @include flex-center(column);
-}
-
-.menu-header{
-    margin-bottom:1.8rem;
-    background-color: $blue-1;
-    padding: 0.5rem 1rem;
+    width: 70%;
+    padding: 0.8rem 1rem;
     border-radius: 0.5rem 1rem;
-    box-shadow: 0.5rem 0.5rem $blue-4;
+    border: 0;
+    font-family: "dogicabold";
+
+    &:hover::before {
+      content: "> ";
+    }
+  }
+
+  & button:first-child:hover {
+    transform: translateX(0.5rem);
+    background-color: $blue-4;
+    color: lightgreen;
+    transition: 150ms ease-in-out;
+  }
+  & button:nth-child(2):hover {
+    transform: translateX(0.5rem);
+    color: lightsalmon;
+    background-color: $blue-4;
+    transition: 150ms ease-in-out;
+  }
+  & button:nth-child(3):hover {
+    transform: translateX(0.5rem);
+    color: rgb(251, 131, 149);
+    background-color: $blue-4;
+    transition: 150ms ease-in-out;
+  }
 }
-
-.menu-content{
-    width:100%;
-    margin-bottom: 2rem;
-    @include flex-center(column);
-    gap: 1rem;
-
-    button{
-        color: $blue-4;
-        width: 70%;
-        padding: 0.8rem 1rem;
-        border-radius: 0.5rem 1rem;
-        border:0;
-        font-family: 'dogicabold';
-
-        &:hover::before{
-            content: '> ';
-        }
-    
-    }
-
-    & button:first-child:hover{
-        transform: translateX(0.5rem);
-        background-color: $blue-4;
-        color: lightgreen;
-        transition: 150ms ease-in-out;
-
-        
-    }
-    & button:nth-child(2):hover{
-        transform: translateX(0.5rem);
-        color: lightsalmon;
-        background-color: $blue-4;;
-        transition: 150ms ease-in-out
-    }
-    & button:nth-child(3):hover{
-        transform: translateX(0.5rem);
-        color: rgb(251, 131, 149);
-        background-color: $blue-4;
-        transition: 150ms ease-in-out
-    }
-}
-

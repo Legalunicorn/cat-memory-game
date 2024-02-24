@@ -1,96 +1,89 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-.game-container{
-    color: $blue-4;
-    @include flex-center(column);
-    gap:2rem;
-    
+.game-container {
+  color: $blue-4;
+  @include flex-center(column);
+  gap: 2rem;
 }
 
-.results{
-    color: $blue-4;
-    flex-wrap:wrap;
-    border: 0.5rem solid $blue-2;
-    box-shadow: 1rem 1rem $blue-4;
+.results {
+  color: $blue-4;
+  flex-wrap: wrap;
+  border: 0.5rem solid $blue-2;
+  box-shadow: 1rem 1rem $blue-4;
 
-    background-color:$blue-1;
-    padding: 2rem;
-    border-radius: 2rem;
-    gap: 10px;
-    max-width: 80%;
-    text-align: center;
-    // transform: translateY(10px);
-    // transition: 200ms ease-in-out;
+  background-color: $blue-1;
+  padding: 2rem;
+  border-radius: 2rem;
+  gap: 10px;
+  max-width: 80%;
+  text-align: center;
+  // transform: translateY(10px);
+  // transition: 200ms ease-in-out;
 
-
-
-    
-
-    & p:first-child{
-        background-color: $blue-3;
-        border-radius: 1rem;
-        padding: 1rem 2rem;
-        color: white;
-        font-size: 1rem;
-        margin-bottom: 2rem;
-        box-shadow: 0.5rem 0.5rem $blue-4;
-        animation: 1.5s oscillate infinite alternate;
-    }
-    & p:nth-child(2){
-        font-size: 1.3rem;
-        margin: 1rem 1.3rem;
-    }
-
-    & .meme{
-        border: 3px solid $blue-2;
-        margin-bottom: 1rem;
-        max-width:70%;
-        border-radius: 2rem;
-        box-shadow: 0.5rem 0.5rem $blue-4;
-        // animation: 1.5s oscillate infinite alternate;
-    }
-}
-
-.menu-options{
-    @include flex-center(row);
-    gap: 2rem;
-}
-
-.results button{
-    color: $blue-4;
-    width: 70%;
-    padding: 0.8rem 1rem;
-    border-radius: 0.5rem 1rem;
-    font-family: 'dogicabold';
-    border: 0.2rem solid $blue-2;
-    box-shadow: 0.3rem 0.3rem $blue-4;
-    // border: 5px solid $blue-4;
-
-    &:hover{
-        transform: translateY(-0.2rem);
-        background-color: $blue-4;
-        // border: 0.2rem solid $blue-4;
-        color:$beige;
-        transition: 200ms ease-in-out
-
-    }
-}
-
-.score{
-    border: 0.2rem solid $blue-3;
-    background-color: $beige;
-    padding: 0.5rem 1rem;
+  & p:first-child {
+    background-color: $blue-3;
     border-radius: 1rem;
-    box-shadow: 0.3rem 0.3rem $blue-4;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0.5rem 0.5rem $blue-4;
+    animation: 1.5s oscillate infinite alternate;
+  }
+  & p:nth-child(2) {
+    font-size: 1.3rem;
+    margin: 1rem 1.3rem;
+  }
+
+  & .meme {
+    border: 3px solid $blue-2;
+    margin-bottom: 1rem;
+    max-width: 70%;
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem $blue-4;
+    // animation: 1.5s oscillate infinite alternate;
+  }
 }
 
-@keyframes oscillate{
-    from{
-        transform: translateY(-5px)
-    }
-    to{
-        transform: translateY(5px);
-    }
+.menu-options {
+  @include flex-center(row);
+  gap: 2rem;
+}
 
+.results button {
+  color: $blue-4;
+  width: 70%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem 1rem;
+  font-family: "dogicabold";
+  border: 0.2rem solid $blue-2;
+  box-shadow: 0.3rem 0.3rem $blue-4;
+  // border: 5px solid $blue-4;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    background-color: $blue-4;
+    // border: 0.2rem solid $blue-4;
+    color: $beige;
+    transition: 200ms ease-in-out;
+  }
+}
+
+.score {
+  border: 0.2rem solid $blue-3;
+  background-color: $beige;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem $blue-4;
+}
+
+@keyframes oscillate {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
 }

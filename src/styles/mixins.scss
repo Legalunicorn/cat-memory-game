@@ -1,7 +1,7 @@
-@mixin flex-center($dir){
-    display:flex;
-    // flex-direction: column;
-    flex-direction: #{$dir};
-    justify-content: center;
-    align-items: center;
+@mixin flex-center($dir) {
+  display: flex;
+  // flex-direction: column;
+  flex-direction: #{$dir};
+  justify-content: center;
+  align-items: center;
 }

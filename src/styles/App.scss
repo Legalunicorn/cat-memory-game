@@ -1,66 +1,64 @@
 @import "./mixins.scss";
 @import "./variables.scss";
 
-#root{
+#root {
   @include flex-center(column);
-
 }
 
-.header{
+.header {
   animation: 1.5s oscillate2 infinite alternate;
   margin: 1.5rem 1.3rem;
   border: 0.5rem solid $blue-3;
   box-shadow: 0.8rem 0.8rem $blue-4;
   @include flex-center(column);
   @font-face {
-    font-family: 'FatCat';
-    src: url('../assets/font/FatCat.ttf');
-  };
-  font-family: 'FatCat',Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "FatCat";
+    src: url("../assets/font/FatCat.ttf");
+  }
+  font-family: "FatCat", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
   font-weight: bold;
   -webkit-text-stroke: 0.5rem white;
-  & h1{
+  & h1 {
     font-style: italic;
     font-size: 3.5rem;
     text-align: center;
     // -webkit-text-stroke: 1rem white;
   }
 
-  paint-order:stroke fill;
-  color:$blue-4;
+  paint-order: stroke fill;
+  color: $blue-4;
   padding: 1.8rem;
   border-radius: 1.5rem 2.5rem;
   background-color: #f3ebdf;
 
-  &:hover{
+  &:hover {
     background-color: $blue-4;
     // border: 0;
     transform: translateY(-0.5rem);
-    transition: 200ms ease-in-out
+    transition: 200ms ease-in-out;
   }
 }
 
-.content{
-
+.content {
   @include flex-center(row);
   padding: 1rem 0.5rem;
-  width:100%;
+  width: 100%;
 }
 
-@keyframes oscillate2{
-  from{
-    tranform: translateY(-3px)
+@keyframes oscillate2 {
+  from {
+    tranform: translateY(-3px);
   }
-  to{
-    transform:translateY(3px)
+  to {
+    transform: translateY(3px);
   }
 }
 
-
-@media(max-width:600px){
-  .header,.header h1{
+@media (max-width: 600px) {
+  .header,
+  .header h1 {
     -webkit-text-stroke: 0 white;
     paint-order: normal;
   }
 }
-

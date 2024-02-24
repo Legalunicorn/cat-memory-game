@@ -1,47 +1,42 @@
 :root {
   @font-face {
-    font-family: 'dogicabold';
-    src: url('./src/assets/font/dogicabold.ttf');
+    font-family: "dogicabold";
+    src: url("./src/assets/font/dogicabold.ttf");
   }
 
-  font-family: 'dogicabold',Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "dogicabold", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 16px;
 
   background-color: #f3ebdf;
 
-  background-image: url('./assets/images/background_1.png');
+  background-image: url("./assets/images/background_1.png");
   /* background-size: contain; */
-  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  cursor: url("./assets/images/popcat.png")
+  cursor: url("./assets/images/popcat.png");
 }
 
 *,
 *::before,
-*::after{
-  margin:0;
-  padding:0;
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-
-@media (max-width:600px){
-  :root{
+@media (max-width: 600px) {
+  :root {
     font-size: 13px;
   }
 
-  .header{
-    padding:0.5rem;
+  .header {
+    padding: 0.5rem;
   }
-
 }
-
-
-
