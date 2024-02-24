@@ -7,6 +7,7 @@
 }
 
 .header{
+  animation: 1.5s oscillate2 infinite alternate;
   margin: 1.5rem 1.3rem;
   border: 0.5rem solid $blue-3;
   box-shadow: 0.8rem 0.8rem $blue-4;
@@ -46,6 +47,15 @@
   width:100%;
 }
 
+@keyframes oscillate2{
+  from{
+    tranform: translateY(-3px)
+  }
+  to{
+    transform:translateY(3px)
+  }
+}
+
 
 @media(max-width:600px){
   .header h1{
@@ -53,3 +63,4 @@
     paint-order: normal;
   }
 }
+
