@@ -5,7 +5,7 @@ import DisplayChoices from "./DisplayChoices";
 
 import "../styles/GameWindow.scss"
 
-import popcat from "../assets/images/popcat.png"
+import popcat from "../assets/images/popcat.gif"
 
 
 
@@ -58,6 +58,7 @@ export default function GameWindow({
             <>
                 <div className="loading-all">
                     <img src={popcat} alt="" />
+                    <p>Loading your {noCats} cats....</p>
                 </div>
             </>
         )

@@ -4,11 +4,9 @@ import "../styles/App.scss"
 import Menu from './Menu'
 import GameWindow from './GameWindow';
 import DisplayResult from './Result';
-import victory from "../assets/images/victory.gif"
-import lose from "../assets/images/lose.gif"
 import background_music from "../assets/sound/menu_select.mp3"
-import DisplayChoices from './DisplayChoices';
 
+import card_audio from "../assets/sound/card.mp3"
 //test your API?
 
 
@@ -23,11 +21,7 @@ function App(){
   // const [catsData,setCatsData] = useState('')
 
   //audio
-  const bg_music  = new Audio(background_music);
-
-  function playBgMusic(){
-    bg_music.play();
-  }
+  const card_sound  = new Audio(card_audio);
 
 
   console.log('ES HS: ',endScore,highScore)
@@ -42,12 +36,14 @@ function App(){
   }
 
   function handleMenuButton(){
+    card_sound.play()
     setDifficulty('')
     setGameOver(false)
     setEndScore(0)
     setResult('')
   }
   function handleRestartGame(){
+    card_sound.play()
     setDifficulty(difficulty)
     setGameOver(false)
     setEndScore(0)
@@ -76,22 +72,7 @@ function App(){
                 handleMenuButton={handleMenuButton}
                 handleRestartGame={handleRestartGame}
                 />
-                // <>
-                //   {result=='victory'?(
-                //     <>
-                //     <p>You Won!</p>
-                //     <img src={victory} alt="victory_gif"></img>
-                //     </>
-                //   ):(
-                //     <>
-                //     <p>Game over!Better luck next time. </p>
-                //     <img src={lose} alt="lose_gif"></img>
-                //     </>
-                //   )}
-                  
-                //   <button onClick={handleMenuButton}>Menu</button>                
-                //   <button onClick={handleRestartGame}>Try Again</button>
-                // </>
+                
  
               ):(
                 <GameWindow
@@ -115,7 +96,7 @@ function App(){
       </div>
 
       <div className="footer">
-
+          
       </div>
     </>
   )

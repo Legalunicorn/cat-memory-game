@@ -3,7 +3,7 @@
 
 .card{
     width:20%;
-    min-width:120px;
+    min-width:100px;
     aspect-ratio: 1/1.2;
     line-height: 0;
 
@@ -14,7 +14,9 @@
         backface-visibility: hidden;
     
         &  .cat-img{
-        border: 5px solid white;
+        border: 5px solid $blue-2;
+        box-shadow: 0.5rem 0.5rem $blue-4;
+
         border-radius: 1.25rem 2rem;;
         object-fit:cover;
         width:100%;

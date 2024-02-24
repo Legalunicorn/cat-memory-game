@@ -9,13 +9,7 @@
   font-weight: 400;
   font-size: 16px;
 
-  /* color-scheme: light dark; */
-  /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
-  /* background-image: url('./assets/images/popcat.png'); */
-  /* background-size: 5%; */
   background-color: bisque;
-  /* background-repeat: space; */
 
   background-image: url('./assets/images/background_1.png');
   /* background-size: contain; */
@@ -25,6 +19,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  cursor: url("./assets/images/popcat.png")
 }
 
 *,
@@ -40,6 +36,11 @@
   :root{
     font-size: 13px;
   }
+
+  .header{
+    padding:0.5rem;
+  }
+
 }
 
 

@@ -7,6 +7,9 @@
 }
 
 .header{
+  margin: 1.5rem 1.3rem;
+  border: 0.5rem solid $blue-3;
+  box-shadow: 0.8rem 0.8rem $blue-4;
   @include flex-center(column);
   @font-face {
     font-family: 'FatCat';
@@ -15,22 +18,35 @@
   font-family: 'FatCat';
   -webkit-text-stroke: 0.5rem white;
   & h1{
-    font-size: 4rem;
+    font-style: italic;
+    font-size: 3.5rem;
     text-align: center;
     -webkit-text-stroke: 1rem white;
   }
-  
+
   paint-order:stroke fill;
-
   color:$blue-4;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  background-color: $beige;
 
-  margin-bottom: 2rem;
-  padding: 2rem;
+  &:hover{
+    background-color: $blue-4;
+    // border: 0;
+    transform: translateY(-0.5rem);
+    transition: 200ms ease-in-out
+  }
 }
 
 .content{
+
   @include flex-center(row);
+  // border: 1rem solid white;
+  // background-color: #EEE3CB;
+  padding: 1rem 0.5rem;
+  // border-radius: 1.5rem;
   width:100%;
+  // filter: drop-shadow(0 0 2rem #e9c7a9)
 }
 /* #root {
   max-width: 1280px;

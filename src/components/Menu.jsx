@@ -1,7 +1,7 @@
 //menu component 
 import "../styles/Menu.scss"
 
-import menu_audio from "../assets/sound/menu_select.mp3"
+import menu_audio from "../assets/sound/enter_game.mp3"
 
 
 
