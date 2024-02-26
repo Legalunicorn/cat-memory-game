@@ -10,9 +10,11 @@
   font-weight: 400;
   font-size: 16px;
 
-  background-color: #f3ebdf;
-
-  background-image: url("./assets/images/background_1.png");
+  /* background-color: #f3ebdf; */
+  /* background-color: #e46363; */
+  background-image: linear-gradient(#e46363,#ee8f8f);
+  /* background-image: url("./assets/images/background_1.png");  */
+  /* background-image: url("./assets/images/background_1.png"),linear-gradient(#e46363,#ee8f8f); */
   /* background-size: contain; */
 
   font-synthesis: none;
@@ -30,6 +32,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  min-height: 100vh;
+}
+.footer{
+  background-color: #ee8f8f;
+}
+
 
 @media (max-width: 600px) {
   :root {

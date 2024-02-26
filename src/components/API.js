@@ -18,7 +18,3 @@ export default async function getCats(noCats) {
     console.log("Error fetching cats, ", error);
   }
 }
-
-// let bingo = await getCats(14)
-// console.log(bingo)
-// // console.log(await getCats(13))

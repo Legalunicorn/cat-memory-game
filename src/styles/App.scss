@@ -6,7 +6,6 @@
 }
 
 .header {
-  animation: 1.5s oscillate2 infinite alternate;
   margin: 1.5rem 1.3rem;
   border: 0.5rem solid $blue-3;
   box-shadow: 0.8rem 0.8rem $blue-4;
@@ -15,27 +14,22 @@
     font-family: "FatCat";
     src: url("../assets/font/FatCat.ttf");
   }
-  font-family: "FatCat", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
+  font-family: "FatCat", Impact, Haettenschweiler, "Arial Narrow Bold",sans-serif;
   font-weight: bold;
-  // -webkit-text-stroke: 0.5rem white;
+  animation: 1.5s oscillate2 infinite alternate;
   & h1 {
     font-style: italic;
     font-size: 3.5rem;
     text-align: center;
-    text-shadow: 2px 2px 0px $blue-2, 4px 4px 0px rgba(0,0,0,0.25)
-    // -webkit-text-stroke: 1rem white;
+    @include text-shadow-normal;
   }
-
-  // paint-order: stroke fill;
   color: $blue-4;
   padding: 1.8rem;
   border-radius: 1.5rem 2.5rem;
-  background-color: #f3ebdf;
+  background-color: $beige-3;
 
   &:hover {
     background-color: $blue-3;
-    // border: 0;
     transform: translateY(-0.5rem);
     transition: 200ms ease-in-out;
   }

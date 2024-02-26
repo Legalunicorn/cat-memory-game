@@ -1,13 +1,10 @@
-//react
 import { useState } from "react";
 import "../styles/App.scss";
 import Menu from "./Menu";
 import GameWindow from "./GameWindow";
 import DisplayResult from "./Result";
 import background_music from "../assets/sound/background_music.mp3";
-
 import card_audio from "../assets/sound/card.mp3";
-//test your API?
 
 function App() {
   const [difficulty, setDifficulty] = useState("");
