@@ -6,10 +6,6 @@ export default function DisplayChoices({
   copyData,
   setIsGameOver,
   noCats,
-  // score,
-  // setScore,
-  highScore,
-  setHighScore,
   setEndScore,
   setResult,
 }) {
@@ -57,18 +53,13 @@ export default function DisplayChoices({
 
   const chosenOne = getUnpicked();
   let options = populateOptions(chosenOne, displayCount, noCats);
-  console.log("bef shuffle: ", options);
-  options = options.sort(() => Math.random() - 0.5);
-  console.log("aft shuffle: ", options);
-
+ 
   const CatsJSX = options.map((cat) => (
     <>
       <Card
         key={cat.id}
         id={cat.id}
         url={cat.url}
-        // highScore={highScore}
-        // setHighScore={setHighScore}
         chosenIds={chosenIds}
         setChosenIds={setChosenIds}
         score={score}

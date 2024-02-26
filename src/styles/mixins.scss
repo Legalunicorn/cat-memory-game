@@ -5,3 +5,23 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin blue-double-border($rem){
+  border: #{$rem}rem solid $blue-2;
+  box-shadow: #{$rem*1.5}rem #{$rem*1.5}rem $blue-4
+}
+
+@mixin blue-double-border-2($rem){
+  border: #{$rem}rem solid $blue-3;
+  box-shadow: #{$rem*1.5}rem #{$rem*1.5}rem $blue-4
+}
+
+
+@mixin text-shadow-small{
+  text-shadow: 1px 1px 0px $blue-2, 3px 3px 0px rgba(0,0,0,0.25)
+}
+
+@mixin text-shadow-normal{
+  text-shadow: 2px 2px 0px $blue-2, 4px 4px 0px rgba(0,0,0,0.25)
+
+}

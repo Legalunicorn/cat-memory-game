@@ -17,6 +17,7 @@ popcat drawn by me :-)
 
 ```
 git clone https://github.com/Legalunicorn/cat-memory-game
+cd cat-memory-game
 npm install
 npm run build
 ```
@@ -28,3 +29,6 @@ npm run preview
 ```
 
 and go to the link provided in the terminal
+
+## notes
+Missing features: sync cats loading

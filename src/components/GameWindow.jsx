@@ -1,20 +1,13 @@
 import { useState, useEffect } from "react";
-
 import getCats from "./API";
 import DisplayChoices from "./DisplayChoices";
-
 import "../styles/GameWindow.scss";
-
 import popcat from "../assets/images/popcat.gif";
 
-// import bg_aud from "../assets/sound/background_music.mp3"
 
 export default function GameWindow({
   difficulty,
   setIsGameOver,
-  highScore,
-  setHighScore,
-  endScore,
   setEndScore,
   setResult,
 }) {
@@ -28,9 +21,7 @@ export default function GameWindow({
   }
 
   const [catsData, setCatsData] = useState([]);
-  // const [gameOver,setGameOver] = useState(false)
 
-  // const bg = new Audio(bg_aud)
 
   useEffect(() => {
     async function startFetch() {
@@ -50,16 +41,13 @@ export default function GameWindow({
   function bgMusic() {
     let bg_audio = document.getElementById("audio");
     if (bg_audio.paused) {
-      //not ended = true => ENDED
-      console.log("not over");
       bg_audio.play();
     }
     //
     else {
-      console.log("over");
+      console.log("bg music overover");
     }
 
-    // bg.play()
   }
   if (catsData.length == 0) {
     return (
@@ -77,9 +65,6 @@ export default function GameWindow({
         setCatsData={setCatsData}
         noCats={noCats}
         setIsGameOver={setIsGameOver}
-        highScore={highScore}
-        setHighScore={setHighScore}
-        // score={score}
         setEndScore={setEndScore}
         setResult={setResult}
       />

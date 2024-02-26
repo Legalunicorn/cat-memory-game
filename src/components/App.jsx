@@ -1,13 +1,10 @@
-//react
 import { useState } from "react";
 import "../styles/App.scss";
 import Menu from "./Menu";
 import GameWindow from "./GameWindow";
 import DisplayResult from "./Result";
 import background_music from "../assets/sound/background_music.mp3";
-
 import card_audio from "../assets/sound/card.mp3";
-//test your API?
 
 function App() {
   const [difficulty, setDifficulty] = useState("");
@@ -18,7 +15,6 @@ function App() {
 
   //audio
   const card_sound = new Audio(card_audio);
-  const bg = new Audio(background_music);
 
   if (endScore > highScore) {
     setHighScore(endScore);
@@ -51,7 +47,6 @@ function App() {
           <Menu difficulty={difficulty} setDifficulty={setDifficulty} />
         ) : (
           <>
-            {/* game over,render,hit back this function */}
             {gameOver ? (
               <DisplayResult
                 result={result}
@@ -74,7 +69,6 @@ function App() {
         )}
       </div>
 
-      <div className="footer"></div>
     </>
   );
 }

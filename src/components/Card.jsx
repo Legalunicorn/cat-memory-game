@@ -17,13 +17,11 @@ export default function Card({
   const click_audio = new Audio(card_audio);
   function handleCardClick(e) {
     click_audio.play();
-    console.log("user clicked id: ", e.target.dataset.id);
     const id = e.target.dataset.id;
 
     if (chosenIds.includes(id)) {
       setIsGameOver(true);
       setEndScore(score);
-      console.log("setting endscore: ", score, setEndScore);
     } else {
       setScore(score + 1);
       let nextRenderScore = score + 1;
@@ -40,9 +38,7 @@ export default function Card({
     }
   }
 
-  // const [isLoaded,setisLoaded] = useState(false)
   function handleLoad(e) {
-    //instead tell the dom one has Loaded?
     e.target.classList.remove("hide");
     e.target.nextElementSibling.classList.toggle("hide");
   }
@@ -50,7 +46,6 @@ export default function Card({
   return (
     <>
       <div data-id={id} onClick={handleCardClick} key={id} className="card">
-        {/* dont actually need the div below */}
         <div key={Date.now()} className="card-front">
           <img
             data-id={id}
