@@ -52,7 +52,12 @@ export default function DisplayChoices({
   }
 
   const chosenOne = getUnpicked();
-  let options = populateOptions(chosenOne, displayCount, noCats);
+  const options = populateOptions(chosenOne, displayCount, noCats);
+  //random swap
+  let rand = Math.round(Math.random()*(options.length))
+  let temp = options[0]
+  options[0] = options[rand]
+  options[rand] = temp
  
   const CatsJSX = options.map((cat) => (
     <>
