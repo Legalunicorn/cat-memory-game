@@ -8,8 +8,6 @@ import popcat from "../assets/images/popcat.gif";
 export default function GameWindow({
   difficulty,
   setIsGameOver,
-  highScore,
-  setHighScore,
   setEndScore,
   setResult,
 }) {

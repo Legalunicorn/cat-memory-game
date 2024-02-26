@@ -1,3 +1,5 @@
+@import "./styles/mixins.scss";
+
 :root {
   @font-face {
     font-family: "dogicabold";
@@ -10,19 +12,18 @@
   font-weight: 400;
   font-size: 16px;
 
-  /* background-color: #f3ebdf; */
-  /* background-color: #e46363; */
-  background-image: linear-gradient(#e46363,#ee8f8f);
-  /* background-image: url("./assets/images/background_1.png");  */
-  /* background-image: url("./assets/images/background_1.png"),linear-gradient(#e46363,#ee8f8f); */
-  /* background-size: contain; */
+  /* background-image: linear-gradient(#e46363,#ee8f8f); */
+  /* background-image: url("./assets/images/background_1.png"); */
+  background: linear-gradient(
+    to right,
+    #e46363 50%,
+    #ee8f8f 50% 100%
+  );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  cursor: url("./assets/images/popcat.png");
 }
 
 *,
@@ -31,14 +32,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: url("./assets/images/cursor2.png"), auto;
+  
 }
 
 body{
   min-height: 100vh;
 }
-.footer{
-  background-color: #ee8f8f;
-}
+
 
 
 @media (max-width: 600px) {

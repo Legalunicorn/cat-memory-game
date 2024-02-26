@@ -15,7 +15,6 @@ function App() {
 
   //audio
   const card_sound = new Audio(card_audio);
-  const bg = new Audio(background_music);
 
   if (endScore > highScore) {
     setHighScore(endScore);
@@ -48,7 +47,6 @@ function App() {
           <Menu difficulty={difficulty} setDifficulty={setDifficulty} />
         ) : (
           <>
-            {/* game over,render,hit back this function */}
             {gameOver ? (
               <DisplayResult
                 result={result}
@@ -71,7 +69,6 @@ function App() {
         )}
       </div>
 
-      <div className="footer"></div>
     </>
   );
 }
